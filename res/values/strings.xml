@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CirleMenu!</string>
+    <string name="app_name">CirleMenu</string>
+
+    <color name="yellow">#F5D60A</color>
+    <color name="gold">#FFD700</color>
+
+</resources>

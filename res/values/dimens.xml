@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="gallery_item_width">-50dip</dimen>
+    <dimen name="gallery_spacing">10dip</dimen>
+
+</resources>
