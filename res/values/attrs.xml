@@ -23,5 +23,21 @@
         <attr name="end_angle" format="float"></attr>
         <attr name="circle_fill" format="string"></attr>
     </declare-styleable>
+    
 
+    <declare-styleable name="Circle">
+        <attr name="circleBackground" format="integer" />
+        <attr name="firstChildPosition">
+            <enum name="East" value="0" />
+            <enum name="South" value="90" />
+            <enum name="West" value="180" />
+            <enum name="North" value="270" />
+        </attr>
+        <attr name="rotateToCenter" format="boolean" />
+        <attr name="isRotating" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ChildView">
+        <attr name="name" format="string" />
+    </declare-styleable>
+    
 </resources>

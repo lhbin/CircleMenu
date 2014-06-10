@@ -37,7 +37,7 @@ public class CircleView extends View {
     private GestureDetector mGestureDetector;
 
     private int speed = 100;
-    private float deceleration = 1 + (30f / speed);
+    private float deceleration = 1 + (25f / speed);
     private boolean allowRotating = true;
     private boolean mNeedCallListen = false;
 
@@ -181,8 +181,11 @@ public class CircleView extends View {
         }
         if (mChildrenItems != null) {
             for (int index = 0; index < mChildrenItems.length; index++) {
-                drawInCenter(canvas, mChildrenItems[index].x, mChildrenItems[index].y,
-                        mChildrenItems[index].text);
+                ViewItem child = mChildrenItems[index];
+                if(child != null && child.y < mPointY){
+                    drawInCenter(canvas, mChildrenItems[index].x, mChildrenItems[index].y,
+                            mChildrenItems[index].text);
+                }
             }
         }
     }
@@ -471,7 +474,6 @@ public class CircleView extends View {
         public void run() {
             if (allowRotating) {
                 if (Math.abs(velocity) > 1) {
-                    Log.e("FlingRunnable", "velocity:" + velocity);
                     resetStonesAngle((int) velocity / speed);
                     computeCoordinates();
                     invalidate();
